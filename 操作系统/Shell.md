@@ -262,7 +262,7 @@ echo $length2 #输出：5
 echo ${array[2]} #输出：3
 unset array[1]# 删除下表为1的元素也就是删除第二个元素
 for i in ${array[@]};do echo $i ;done # 遍历数组，输出： 1 3 4 5 
-unset arr_number; # 删除数组中的所有元素
+unset unset array[@]; # 删除数组中的所有元素
 for i in ${array[@]};do echo $i ;done # 遍历数组，数组元素为空，没有任何输出内容
 ```
 
@@ -299,6 +299,7 @@ echo "Total value : $val
 关系运算符只支持数字，不支持字符串，除非字符串的值是数字。
 
 ![shell关系运算符](http://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-22/64391380.jpg)
+注意：符号左右需要有空格，*需要转义\\**
 
 通过一个简单的示例演示关系运算符的使用，下面shell程序的作用是当score=100的时候输出A否则输出B。
 
@@ -306,18 +307,18 @@ echo "Total value : $val
 #!/bin/bash
 score=90;
 maxscore=100;
-if [ $score -eq $maxscore ]
+if [ $score -eq $maxscore ] #注意符号之间的空格是必须的
 then
-   echo "A"
+   echo "最高分"
 else
-   echo "B"
+   echo "不是最高分"
 fi
 ```
 
 输出结果：
 
 ```
-B
+最高分
 ```
 
 ### 逻辑运算符
