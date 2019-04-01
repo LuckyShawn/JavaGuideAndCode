@@ -23,7 +23,7 @@
 
 ## final 关键字
 
-**final关键字主要用在三个地方：变量、方法、类。**
+**final关键字主要用在三个地方： 变量、方法、类。**
 
 1. **对于一个final变量，如果是基本数据类型的变量，则其数值一旦在初始化之后便不能更改；如果是引用类型的变量，则在对其初始化之后便不能再让其指向另一个对象。**
 
@@ -67,7 +67,7 @@ class Manager {
 
 
 
-## super 关键字
+## super 关键字（调用父类）
 
 super关键字用于从子类访问父类的变量和方法。 例如：
 
@@ -88,7 +88,7 @@ public class Sub extends Super {
 }
 ```
 
-在上面的例子中，Sub 类访问父类成员变量 number 并调用其其父类 Super 的 `showNumber（）` 方法。
+在上面的例子中，Sub 类访问父类成员变量 number 并调用其父类 Super 的 `showNumber（）` 方法。
 
 **使用 this 和 super 要注意的问题：**
 
