@@ -3,7 +3,7 @@ package MultithreadDemo;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @Description CAS是什么？ compareAndSet --> 比较并设值
+ * @Description CAS是什么？compareAndSwap， compareAndSet --> 比较并交换
  * @Author shawn
  * @create 2019/5/10 0010
  */
