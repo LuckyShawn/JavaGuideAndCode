@@ -16,6 +16,7 @@ public class AtomicDemo {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+
                 test.add();
                 System.out.print(ResourceTest.i+",");
             }).start();

@@ -24,7 +24,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class VolatileDemo {
     public static void main(String[] args){
         seeOkByVolatile();
-        NotAtomic();
+       //NotAtomic();
     }
 
     private static void NotAtomic() {
