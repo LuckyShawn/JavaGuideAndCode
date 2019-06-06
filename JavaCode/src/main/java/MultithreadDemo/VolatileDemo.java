@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  *                  why值小于20000的原因：t1 t2 t3 读取了主内存的值，t1修改完值写入主内存后，
  *                  挂起的t2,t3还没来得及得到t1的通知，就执行++操作并写入主内存，number只加了一次，造成写覆盖
  *                三、如何保证原子性？
- *                   *.加synchronized
+ *                   *.加synchronized,性能一般
  *                   *.使用juc下的AtomicInteger避免写覆盖
  *
  *
@@ -59,6 +59,7 @@ public class VolatileDemo {
                 e.printStackTrace();
             }
             myData.addTo60();
+
             System.out.println(Thread.currentThread().getName()+"\t updated number value:"+myData.number);
         },"AAA").start();
 
